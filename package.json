@@ -4,13 +4,13 @@
     "license": "MIT",
     "version": "0.0.2",
     "scripts": {
-        "build": "rollup -c",
-        "autobuild": "rollup -c -w",
-        "dev": "run-p start:dev autobuild",
+        "build-svelte": "rollup -c",
+        "autobuild-svelte": "rollup -c -w",
+        "dev": "run-p start:dev autobuild-svelte",
         "start": "sirv public --single",
         "start:dev": "sirv public --single --dev",
         "stories": "start-storybook",
-        "build-stories": "build-storybook",
+        "build": "build-storybook -o public",
         "static-stories": "build-storybook -c .storybook -o .out"
     },
     "dependencies": {
