@@ -9,4 +9,3 @@ function loadStories() {
 
 configure(loadStories, module);
 addDecorator(withA11y);
-addParameters( { viewport: { viewports: newViewports } });
