@@ -1,6 +1,6 @@
 public/bundle.*
 public/utils.*
-
+build
 ### Node ###
 # Logs
 logs
