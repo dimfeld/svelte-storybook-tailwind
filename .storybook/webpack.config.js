@@ -28,6 +28,10 @@ module.exports = ({ config, mode }) => {
             include: path.resolve(__dirname, '../storybook/'),
         },
         {
+            test: /\.ts$/,
+            loader: 'ts-loader',
+        },
+        {
             test: /\.stories\.js?$/,
             loaders: [require.resolve('@storybook/source-loader')],
             include: [path.resolve(__dirname, '../storybook')],
