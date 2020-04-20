@@ -1,4 +1,4 @@
-const production = !process.env.ROLLUP_WATCH;
+const production = process.env.NODE_ENV !== 'development';
 const purgecss = require('@fullhuman/postcss-purgecss');
 
 module.exports = {

@@ -8,7 +8,7 @@ import babel from 'rollup-plugin-babel';
 import html, { makeHtmlAttributes } from '@rollup/plugin-html';
 import copy from 'rollup-plugin-copy';
 
-const production = !process.env.ROLLUP_WATCH;
+const production = process.env.NODE_ENV !== 'development';
 
 const babelConfig = {
   extensions: ['.js', '.mjs', '.html', '.svelte', '.ts'],
