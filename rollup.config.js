@@ -1,3 +1,5 @@
+import * as fs from 'fs';
+import { template } from 'lodash';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -63,7 +65,6 @@ export default {
       targets: [{ src: 'static/**/*', dest: 'build/' }],
     }),
     commonjs(),
-    json(),
     babel(babelConfig),
 
     // Watch the `build` directory and refresh the
@@ -94,7 +95,7 @@ export default {
           })
           .join('\n');
 
-        let exec = _.template(templateFile.toString());
+        let exec = template(templateFile.toString());
         return exec({
           attributes,
           title,
