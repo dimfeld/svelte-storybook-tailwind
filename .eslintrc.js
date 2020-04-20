@@ -1,5 +1,9 @@
 const jsRules = {
   'no-unused-vars': ['warn', { args: 'none' }],
+  'no-return-await': 'warn',
+  'no-use-before-define': 'error',
+  'no-mixed-spaces-and-tabs': 'error',
+  'no-trailing-spaces': 'warn',
 };
 
 module.exports = {
