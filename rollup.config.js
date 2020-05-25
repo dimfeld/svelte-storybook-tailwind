@@ -31,7 +31,7 @@ const babelConfig = {
 export default {
   input: 'src/main.js',
   output: {
-    dir: 'build',
+    dir: 'public',
     entryFileNames: '[name].[hash].js',
     chunkFileNames: '[name].[hash].js',
     assetFileNames: '[name].[hash][extname]',
@@ -48,7 +48,7 @@ export default {
       // css: css => {
       //     css.write('public/bundle.css');
       // },
-      // Emit CSS as a file for processing through rollup
+      // Instead, emit CSS as a file for processing through rollup
       emitCss: true,
     }),
     postcss({
@@ -62,14 +62,14 @@ export default {
         importee === 'svelte' || importee.startsWith('svelte/'),
     }),
     copy({
-      targets: [{ src: 'static/**/*', dest: 'build/' }],
+      targets: [{ src: 'static/**/*', dest: 'public/' }],
     }),
     commonjs(),
     babel(babelConfig),
 
-    // Watch the `build` directory and refresh the
+    // Watch the `public` directory and refresh the
     // browser on changes when not in production
-    !production && livereload('build'),
+    !production && livereload('public'),
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
