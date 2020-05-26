@@ -8,7 +8,7 @@ module.exports = {
     require('autoprefixer'),
     production &&
       purgecss({
-        content: ['./src/*.html', './static/*.html', './src/*.svelte'],
+        content: ['./src/**/*.html', './static/**/*.html', './src/**/*.svelte'],
         whitelistPatterns: [/^svelte-/],
         defaultExtractor: (content) => {
           const regExp = new RegExp(/[A-Za-z0-9-_:/]+/g);
