@@ -7,8 +7,8 @@
     "build": "rollup -c",
     "autobuild": "rollup -c -w",
     "dev": "NODE_ENV=development run-p start:dev autobuild",
-    "start": "sirv build --single",
-    "start:dev": "NODE_ENV=development sirv build --single --dev",
+    "start": "sirv public --single",
+    "start:dev": "NODE_ENV=development sirv public --single --dev",
     "stories": "NODE_ENV=development start-storybook",
     "build-storybook": "build-storybook -o build",
     "static-stories": "build-storybook -c .storybook -o .out"
