@@ -1,5 +1,6 @@
 const production = process.env.NODE_ENV !== 'development';
 const purgecss = require('@fullhuman/postcss-purgecss');
+const cssnano = require('cssnano');
 
 module.exports = {
   plugins: [
