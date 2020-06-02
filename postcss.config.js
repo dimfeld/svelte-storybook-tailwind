@@ -12,7 +12,7 @@ module.exports = {
         content: ['./src/**/*.html', './static/**/*.html', './src/**/*.svelte'],
         whitelistPatterns: [/^svelte-/],
         defaultExtractor: (content) => {
-          const regExp = new RegExp(/[A-Za-z0-9-_:/]+/g);
+          const regExp = new RegExp(/[A-Za-z0-9-_:/.]+/g);
 
           const matchedTokens = [];
 
