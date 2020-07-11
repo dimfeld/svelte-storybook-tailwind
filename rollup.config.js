@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { template } from 'lodash';
+import template from 'lodash.template';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
