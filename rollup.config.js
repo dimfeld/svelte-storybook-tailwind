@@ -2,11 +2,12 @@ import * as fs from 'fs';
 import { template } from 'lodash';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import babel from 'rollup-plugin-babel';
+import babel from '@rollup/plugin-babel';
 import html, { makeHtmlAttributes } from '@rollup/plugin-html';
 import copy from 'rollup-plugin-copy';
 
@@ -66,6 +67,12 @@ export default {
     }),
     commonjs(),
     babel(babelConfig),
+
+    replace({
+      'process.env.NODE_ENV': JSON.stringify(
+        process.env.NODE_ENV || 'development'
+      ),
+    }),
 
     // Watch the `public` directory and refresh the
     // browser on changes when not in production
