@@ -15,6 +15,7 @@ const production = process.env.NODE_ENV !== 'development';
 
 const babelConfig = {
   extensions: ['.js', '.mjs', '.html', '.svelte', '.ts'],
+  babelHelpers: 'bundled',
   exclude: ['node_modules/@babel/**', 'static/**', 'build/**', 'public/**'],
   presets: [
     ['@babel/preset-env', { targets: { esmodules: true } }],
