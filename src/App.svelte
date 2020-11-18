@@ -1,5 +1,5 @@
 <script lang="typescript">
-
+  let x = 'app';
 </script>
 
-<p>An app</p>
+<p>An {x}</p>

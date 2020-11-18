@@ -4,6 +4,10 @@ I forked this from https://github.com/jerriclynsjohn/svelte-storybook-tailwind a
 
 This repo also contains a `remove-storybook.sh` script for projects that don't need to use Storybook.
 
+## Snowpack Development
+
+Snowpack is used for quick development speed.
+
 ## Rollup Configuration
 
 - Chunked Build Output with ES Modules.
