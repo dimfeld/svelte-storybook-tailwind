@@ -1,5 +1,6 @@
 <script lang="typescript">
-  let x = 'app';
+  $: x = 'app';
 </script>
 
 <p>An {x}</p>
+

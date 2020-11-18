@@ -1,5 +1,4 @@
 module.exports = {
-  // "extends": "@snowpack/app-scripts-svelte",
   "scripts": {},
   "plugins": [
     '@snowpack/plugin-svelte',
